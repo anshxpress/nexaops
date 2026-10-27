@@ -181,9 +181,9 @@ body:not(.landed) .iris-disc i{bottom:20vh}
 @keyframes slideIn{to{opacity:1;transform:none}}
 
 /* navbar */
-header.nav{position:fixed;top:0;left:0;right:0;z-index:60;display:grid;grid-template-columns:auto 1fr auto;align-items:center;padding:18px 28px;background:transparent;border-bottom:1px solid transparent;transition:background .4s,backdrop-filter .4s,border-color .4s,padding .4s}
+header.nav{position:fixed;top:0;left:0;right:0;z-index:60;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:18px 28px;background:transparent;border-bottom:1px solid transparent;transition:background .4s,backdrop-filter .4s,border-color .4s,padding .4s}
 header.nav.scrolled{background:rgba(6,15,26,.65);backdrop-filter:blur(16px);border-color:var(--line);padding:12px 28px}
-.nav-logo{display:flex;align-items:center;gap:10px;font:400 19px var(--font-main);color:var(--silver);text-decoration:none}
+.nav-logo{justify-self:start;display:flex;align-items:center;gap:10px;font:400 19px var(--font-main);color:var(--silver);text-decoration:none}
 .nav-logo b{font-weight:700;color:var(--ink)}
 .nav-mark{width:34px;height:29px;display:block;flex:none}
 .nav-links{justify-self:center;display:flex;gap:3px;list-style:none;margin:0;padding:4px;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:30px}
@@ -212,10 +212,9 @@ header.nav.scrolled{background:rgba(6,15,26,.65);backdrop-filter:blur(16px);bord
 .mobile-cta-box{margin-top:auto;display:flex;flex-direction:column;gap:12px}
 
 @media(max-width:880px){
-  header.nav{grid-template-columns:auto 1fr}
+  header.nav{grid-template-columns:1fr auto}
   .nav-links{display:none}
   .nav-burger{display:flex}
-  .nav-book{display:none}
 }
 
 /* panels */
@@ -729,8 +728,6 @@ header.nav.scrolled{background:rgba(6,15,26,.65);backdrop-filter:blur(16px);bord
     <li><a href="#contact" data-nav="contact">Contact</a></li>
   </ul>
   <div class="nav-actions">
-    <a class="nav-book" href="#book" id="openBookHeader">⚡ Book Call</a>
-    <a class="nav-icon" href="#contact" aria-label="Contact us"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
     <button class="nav-burger" id="burgerBtn" aria-label="Toggle navigation menu">
       <span></span><span></span><span></span>
     </button>
@@ -748,9 +745,6 @@ header.nav.scrolled{background:rgba(6,15,26,.65);backdrop-filter:blur(16px);bord
     <li><a href="#clients" class="m-link">Client Reviews <span>&rarr;</span></a></li>
     <li><a href="#contact" class="m-link">Start a Project <span>&rarr;</span></a></li>
   </ul>
-  <div class="mobile-cta-box">
-    <button class="btn" id="mBookBtn">Book a 15-Min Scoping Call &rarr;</button>
-  </div>
 </div>
 
 <main>
